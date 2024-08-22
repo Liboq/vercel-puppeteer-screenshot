@@ -1,15 +1,14 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/screenshot.js",
-      "use": "@vercel/node"
-    }
-  ],
   "rewrites": [
     {
-      "source": "/",
+      "source": "/api/screenshot",
       "destination": "/api/screenshot.js"
     }
-  ]
+  ],
+  "functions":{
+    "api/*.js":{
+      "maxDuration": 60
+    }
+  }
 }

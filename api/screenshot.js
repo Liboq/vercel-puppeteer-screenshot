@@ -1,6 +1,8 @@
 import puppeteer from "puppeteer-core";
 import chromium from "@sparticuz/chromium";
 const timeOut = 60;
+
+export const maxDuration = timeOut;
 export default async function handler(req, res) {
   const url = req.query.url;
 
@@ -73,4 +75,3 @@ export default async function handler(req, res) {
   }
 }
 
-export const maxDuration = timeOut;
