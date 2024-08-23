@@ -2,7 +2,9 @@ import puppeteer from "puppeteer-core";
 import chromium from "@sparticuz/chromium";
 const timeOut = 60;
 
-export const maxDuration = timeOut;
+//  https://vercel.com/docs/functions/configuring-functions/duration
+ // available in  Next.js (>= 13.5 or higher), SvelteKit, Astro, Nuxt, and Remix
+export const maxDuration = timeOut; // 纯vercel serverless不起作用
 export default async function handler(req, res) {
   const url = req.query.url;
 
