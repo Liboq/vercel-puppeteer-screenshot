@@ -2,13 +2,8 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/api/screenshot",
+      "source": "/",
       "destination": "/api/screenshot.js"
     }
-  ],
-  "functions":{
-    "api/*.js":{
-      "maxDuration": 60
-    }
-  }
+  ]
 }
